@@ -27,7 +27,7 @@ def help(update, context):
                              text="أنا بوت تليجرام!")
 
 
-def main():
+def app():
     # تعيين رمز المطور الخاص بك هنا
     token = "7369844945:AAEuN4mZk6wv9-JDHzsMdjEzqnTJ3cm3w1U"
 
@@ -49,4 +49,4 @@ def main():
 
 if __name__ == '__main__':
     server()
-    main()
+    app()
