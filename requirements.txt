@@ -1,2 +1,2 @@
-pip install gunicorn
-pip install python-telegram-bot
+gunicorn
+python-telegram-bot
