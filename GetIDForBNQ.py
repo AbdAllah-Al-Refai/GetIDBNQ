@@ -1,7 +1,6 @@
 from telegram.ext import Updater, CommandHandler
 from run import server
 
-
 # تعريف وظيفة التحكم في الأمر /start
 def start(update, context):
     chat_id = update.message.chat_id
@@ -12,7 +11,8 @@ def start(update, context):
     )
     context.bot.send_message(
         chat_id=chat_id,
-        text=f"اسم الطالب:......\nالعمر:....\nالحلقة:....\nChat ID: {chat_id}")
+        text=f"اسم الطالب:......\nالعمر:....\nالحلقة:....\nChat ID: {chat_id}"
+    )
 
     context.bot.send_message(
         chat_id=chat_id,
@@ -41,7 +41,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler('help', help))
 
     # بدء الاستماع إلى التحديثات
-    updater.start_polling()
+    updater.start_polling(poll_interval=0.0, timeout=10, read_latency=2.0)
 
     # استدعاء البوت للعمل حتى يتم إيقافه يدويًا
     updater.idle()
